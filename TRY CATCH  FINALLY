@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Try Catch Finally Throw</h1>
+
+    <input type="text" id="demo">
+    <button onclick="todo()">submit</button>
+
+<p id="p01"></p>
+
+
+<script>
+
+ function todo(){
+
+const message = document.getElementById("p01");
+let x = document.getElementById('demo').value
+
+try{
+    if(x.trim() == "") throw "Empty";
+    if(x.length >10) throw " \t Big statement";
+    if(x.length<5) throw  "too small";
+}
+
+catch(err){
+    message.innerHTML = "Input is" + err;
+}
+
+finally {
+        document.getElementById("demo").value = "";
+      }
+
+ }
+
+</script>
+</body>
+</html>
